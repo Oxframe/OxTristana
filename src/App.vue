@@ -32,14 +32,19 @@
                 collapsed: false,
                 collapsedWidth: 0,
                 demo: "/demo",
-                test: "/test"
+                test: "/test",
             }
         },
-        created: function () {
-            this.collapsedWidth = document.documentElement.clientWidth;
+        created() {
+            this.collapsedWidth = document.body.clientWidth;
         },
-        method: function () {
-            console.log("-----")
+        mounted() {
+            window.onresize = () => {
+                return (() => {
+                    this.collapsedWidth = document.body.clientWidth;
+                    console.log(this.collapsedWidth)
+                })();
+            };
         },
         methods: {
             showContent: function () {
