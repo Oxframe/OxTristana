@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.sider-board {
+    background: url("../assets/background-cover.jpg") top left no-repeat #666666;
+    background-size: cover;
+    display: block;
+    position: fixed;
+    max-width: none;
+    z-index: 900;
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+}
+
+.sider-board .sider-box {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.sider-board .sider-box .sider-content {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    z-index: 800;
+    padding: 0 60px;
+    font-weight: 100;
+    text-align: center;
+    color: #FFF;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.sider-board .sider-box .sider-cover {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(68, 68, 68, 0.6);
+    background-image: -webkit-linear-gradient(-410deg, rgba(68, 68, 68, 0.6) 20%, rgba(0, 0, 0, 0.9));
+    background-image: linear-gradient(140deg, rgba(68, 68, 68, 0.6) 20%, rgba(0, 0, 0, 0.9));
+}
+
+.sider-board .sider-box .sider-mask {
+    background-color: rgba(61, 66, 96, 0.6);
+    background-image: -webkit-linear-gradient(-410deg, rgba(61, 66, 96, 0.6) 20%, rgba(21, 23, 34, 0.8));
+    background-image: linear-gradient(140deg, rgba(61, 66, 96, 0.6) 20%, rgba(21, 23, 34, 0.8));
+}
+
+.sider-content .sider-tool {
+    max-width: 620px;
+    margin: 0 auto;
+}
